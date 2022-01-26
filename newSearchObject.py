@@ -44,15 +44,14 @@ class dataSorter(object):
 
     def plotter(self):
         '''Add a function to plot a linegraph of the sorted array (y axis) against array index a axis'''
-        plt.plot(self.arr)
-        plt.plot(self.sortArr)
-        plt.legend('arr', 'sortArr')
+        plt.plot(self.arr, self.sortArr, label='index vs values')
+        plt.legend()
         plt.show()
     
-    def binarySearch(self.sortArray, target):
+    def binarySearch(self, target):
 
         '''Binary search for target in x by looping'''
-        x = self.arr
+        x = self.sortArr
         start = 0
         end = len(self.arr)
 

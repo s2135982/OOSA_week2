@@ -9,7 +9,11 @@ class newYourBank(yourBank):
 
     def autoDeposit(self):
         self.balance = self.balance + 1000
-
-    def inquiry(self):
-        self.balance = self.balance * 120%
         return self.balance
+    def inquiry(self):
+        self.balance = self.balance * 1.2
+        return self.balance
+
+if __name__ == "__main__":
+    b = newYourBank('Daisy',1200)
+    print(b.autoDeposit())
